@@ -1,0 +1,100 @@
+- GDPR12:
+  - table: BANK_ACCT
+    columns:
+    - ACCT_WRDNG_TXT
+    - BANK_ACCT_TXT
+  - table: BNFTS_DCSN
+    columns:
+    - BNFTS_DCSN_NOTE_TXT
+  - table: CMMNCTN
+    columns:
+    - CMMNCTN_ANOTATN_TXT
+    - CMMNCTN_ID_TXT
+  - table: CMMNCTN_USE
+    columns:
+    - CMMNCTN_USE_TXT
+  - table: CNSLT
+    columns:
+    - CNSLT_NOTE_TXT
+  - table: COMPLAINT
+    columns:
+    - COMPLAINT_SUBJ_DESC
+  - table: DOC
+    columns:
+    - DOC_CLSFCTN_AD_TXT
+    - DOC_CLSFCTN_TXT
+    - DOC_DESC
+    - ENVLP_ID_TXT
+    - ENVLP_PART_TXT
+    - FILE_NM
+    - INDXNG_NOTE_TXT
+    - SNDR_OR_RCPNT_NM
+    - SUBJ_NM
+  - table: FRGN_TAX_ID
+    columns:
+    - FRGN_TAX_NO
+  - table: HLTH_STTS
+    columns:
+    - HLTH_STTS_DESC
+  - table: ID_DOC
+    columns:
+    - ID_NO
+  - table: NAT_PRSN
+    columns:
+    - ANNUT_NO
+    - BIRTH_DT
+    - BIRTH_NM
+    - FIRST_NM
+    - FIRST_PRSNL_INTEREST_CD
+    - INTEREST_DESC
+    - LAST_NM
+    - MDDL_NM
+    - SCND_PRSNL_INTEREST_CD
+    - SOCIAL_SCRTY_NO
+    - TAX_ID_NO
+    - THRD_PRSNL_INTEREST_CD
+  - table: NPS
+    columns:
+    - NPS_DSGNTN_TXT
+    - NPS_SCND_CALL_RSLT_DESC
+  - table: OCC_DESC
+    columns:
+    - OCC_ENTR_DESC
+  - table: PRSN
+    columns:
+    - LETTER_SALUTN_TXT
+    - NM_EXTNSN_MGRTN_TXT
+  - table: PRSN_ADDR_UNSTR
+    columns:
+    - FIRST_ADDR_LN_TXT
+    - FOURTH_ADDR_LN_TXT
+    - SCND_ADDR_LN_TXT
+    - THRD_ADDR_LN_TXT
+  - table: PRSN_ASSMNT
+    columns:
+    - PRSN_ASSMNT_DESC
+  - table: PRSN_ASSMNT_GNRC_DTL
+    columns:
+    - VAL_DT
+    - VAL_TXT
+    - VAL_WHOLE_NO
+  - table: PRSN_GNRC_DTL
+    columns:
+    - VAL_DT
+    - VAL_TXT
+    - VAL_WHOLE_NO
+  - table: PRSN_TO_PRSN_REL
+    columns:
+    - ID_TXT
+  - table: SEPA_MANDT
+    columns:
+    - INITL_RGSTR_REF_TXT
+    - MANDT_REF_TXT
+  - table: TP_CNTRCT
+    columns:
+    - INS_PRPRTY_DESC
+  - table: WEB_PORTAL_GNRC_DTL
+    columns:
+    - VAL_DT
+    - VAL_TXT
+    - VAL_WHOLE_NO
