@@ -1,34 +1,34 @@
-import pandas as pd
+import csv
 import yaml
-#header=["REL_CTGRY_TXT","PRNT_TBL_NM","PRNT_COL_NM","CHLD_TBL_NM","CHLD_COL_NM","ACTIVE_FLG"]
-header=["category","parentTable","parentColumn","childTable","childColumn","active"]
+from collections import OrderedDict
 
-def get_nested_rec(key, grp):
-    rec = dict()
-    #al = dict()
-    rec['category'] = key[0]
-    rec['parentTable'] = key[1]
-    rec['parentColumn'] = key[2]
+csv_file_name = 'prnt_chld_rel.csv'
+yaml_file_name = 'prnt_chld_rel.yaml'
+header=["REL_CTGRY_TXT","PRNT_TBL_NM","PRNT_COL_NM","CHLD_TBL_NM","CHLD_COL_NM","ACTIVE_FLG"]
+#header=["category","parentTable","parentColumn","childTable","childColumn","active"]
+#{'g12': {'child': {'column': 'childcolumn', 'table': 'childtable'}, 'parent': {'column': 'clm_bus_id', 'table': 'CLM'}}}
+conf_list = list()
+with open (csv_file_name,'r+') as c:
+    reader = csv.DictReader(c, delimiter=',', fieldnames=header)
+    next(reader,None)
+    for row in reader:
+        conf_rec = dict()
+        conf_rec={row["REL_CTGRY_TXT"] :
+                    {'parent' :
+                       {'table'  : row["PRNT_TBL_NM"],
+                        'column' : row["PRNT_COL_NM"]
+                       },
+                     'child'  :
+                        {'table'  : row["CHLD_TBL_NM"],
+                         'column' : row["CHLD_COL_NM"]
+                        },
+                     'active' : 'Y' if row["ACTIVE_FLG"] == '1' else 'N'
+                    }
+                 }
+        #print(conf_rec)
+        conf_list.append(conf_rec)
 
-    df_childs = grp[['childTable','childColumn']]
-    #print(df_childs.to_dict('r'))
-    rec['childs'] = df_childs.to_dict('r')
-    #vals=list()
-    #for r in grp
-    #val['childTable']= grp['childTable']
-    #val['childColumn']=grp['childColumn']
-    #vals.append(df_childs.to_dict('r'))
-    return rec
-
-
-df = pd.read_csv('prnt_chld_rel.csv',header=0,names=header)
-#print(df.head)
-records=list()
-for key, grp in df.groupby(["category","parentTable","parentColumn"]):
-    rec = get_nested_rec(key, grp)
-    #print(grp.filter(items=['childTable', 'childColumn']))
-    #print(rec)
-    records.append(rec)
-
-print(yaml.dump(records))
-#print(records)
+ydoc = yaml.dump(conf_list,default_flow_style=False, sort_keys=False)
+print(ydoc)
+with open (yaml_file_name,'w') as y:
+    y.write(ydoc)

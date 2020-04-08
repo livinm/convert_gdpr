@@ -1,0 +1,656 @@
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: BANK_ACCT
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: CNSLT
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: CMMNCTN
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: NAT_PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: CMMNCTN_USE
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: DOC
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: NPS
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_GNRC_DTL
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: TP_CNTRCT
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: COMPLAINT
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_ADDR
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: FRGN_TAX_ID
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: NAT_PRSN
+      column: NAT_PRSN_BUS_ID
+    child:
+      table: PRSN_ASSMNT
+      column: NAT_PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN_ASSMNT
+      column: PRSN_ASSMNT_BUS_ID
+    child:
+      table: BNFTS_DCSN
+      column: PRSN_ASSMNT_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN_ASSMNT
+      column: PRSN_ASSMNT_BUS_ID
+    child:
+      table: HLTH_STTS
+      column: PRSN_ASSMNT_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN_ASSMNT
+      column: PRSN_ASSMNT_BUS_ID
+    child:
+      table: PRSN_ASSMNT_GNRC_DTL
+      column: PRSN_ASSMNT_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: NAT_PRSN
+      column: NAT_PRSN_BUS_ID
+    child:
+      table: OCC_DESC
+      column: NAT_PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: NAT_PRSN
+      column: NAT_PRSN_BUS_ID
+    child:
+      table: ID_DOC
+      column: NAT_PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_TO_PRSN_REL
+      column: FIRST_PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_TO_PRSN_REL
+      column: SCND_PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN_ADDR
+      column: PRSN_ADDR_BUS_ID
+    child:
+      table: PRSN_ADDR_UNSTR
+      column: PRSN_ADDR_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: BANK_ACCT
+      column: BANK_ACCT_BUS_ID
+    child:
+      table: SEPA_MANDT
+      column: BANK_ACCT_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: WEB_PORTAL_DTL
+      column: PRSN_BUS_ID
+    active: Y
+- GDPR12:
+    parent:
+      table: WEB_PORTAL_DTL
+      column: WEB_PORTAL_DTL_BUS_ID
+    child:
+      table: WEB_PORTAL_GNRC_DTL
+      column: WEB_PORTAL_DTL_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CVR_BUS_ID
+    child:
+      table: CVR
+      column: CVR_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CNTRCT_BUS_ID
+    child:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: DOC
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: DOC
+      column: AFFCTD_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: DOC
+      column: SNDNG_RECV_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: INS_PRSN
+      column: NAT_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: INVLVD_PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: INVLVD_PRSN
+      column: INVLVD_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: LTGTN
+      column: CLMNT_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: LTGTN
+      column: DFNDNT_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_ADDR
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_CNTRCT_REL
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_GNRC_DTL
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_TO_PRSN_REL
+      column: FIRST_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN_TO_PRSN_REL
+      column: SCND_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: CMMNCTN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: AGNT
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: CUST_TYP
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: BUS_PRTNR
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: EMP
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PLCY_HLD
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: BANK_ACCT
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: NAT_PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: LGL_PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: DOC
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: INVLVD_PRSN
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PLCY_HLD
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRSN_CNTRCT_REL
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: INVLVD_PRSN_TP_CNTRCT
+      column: PRSN_BUS_ID
+    child:
+      table: PRSN
+      column: PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LGL_PRSN
+      column: LGL_PRSN_BUS_ID
+    child:
+      table: LOC
+      column: LGL_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: NAT_PRSN
+      column: NAT_PRSN_BUS_ID
+    child:
+      table: OCC_DESC
+      column: NAT_PRSN_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: EMP
+      column: EMP_BUS_ID
+    child:
+      table: EMP_ROLE
+      column: EMP_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: BKD
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: CLM_INVSTGT
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: DOC
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: INVLVD_PRPRTY
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: INVLVD_PRSN
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CLM
+      column: CLM_BUS_ID
+    child:
+      table: LTGTN
+      column: CLM_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    child:
+      table: BKD
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    child:
+      table: CVR
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    child:
+      table: DOC
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    child:
+      table: PLCY_HLD
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CNTRCT
+      column: CNTRCT_BUS_ID
+    child:
+      table: PRSN_CNTRCT_REL
+      column: CNTRCT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CVR
+      column: CVR_BUS_ID
+    child:
+      table: BKD
+      column: CVR_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CVR
+      column: CVR_BUS_ID
+    child:
+      table: CVR_ITEM
+      column: CVR_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CVR
+      column: CVR_BUS_ID
+    child:
+      table: INS_PRPRTY
+      column: CVR_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: CVR
+      column: CVR_BUS_ID
+    child:
+      table: INS_PRSN
+      column: CVR_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: DMG
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: INVLVD_PRPRTY
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: INVLVD_PRSN
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: LOSS_EVENT_DESC
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: LOSS_EVENT_ADDR
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: LOSS_EVENT
+      column: LOSS_EVENT_BUS_ID
+    child:
+      table: AUTHRTY_RPRT
+      column: LOSS_EVENT_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRPRTY
+      column: PRPRTY_BUS_ID
+    child:
+      table: INS_PRPRTY
+      column: PRPRTY_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: PRPRTY
+      column: PRPRTY_BUS_ID
+    child:
+      table: VEH
+      column: PRPRTY_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: VEH
+      column: VEH_BUS_ID
+    child:
+      table: VEH_ODOMTR_CNT
+      column: VEH_BUS_ID
+    active: Y
+- FRAUD_CLM:
+    parent:
+      table: INVLVD_PRPRTY
+      column: PRPRTY_BUS_ID
+    child:
+      table: PRPRTY
+      column: PRPRTY_BUS_ID
+    active: Y

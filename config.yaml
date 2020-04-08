@@ -1,5 +1,15 @@
 ---
-- category: GDPR12
-
+- GDPR12:
+   - parentTable: tableA
+       - parentColumn: aBusId
+           childs:
+             - childTable: tableB
+               childColumn: bBusId
+             - childTable: tableB
+               childColumn: bBusId
+       - parentColumn: aBusId1
+           childs:
+             - childTable: tableC
+               childColumn: cBusId1
 
 ...
