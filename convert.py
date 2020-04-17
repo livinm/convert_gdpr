@@ -41,7 +41,7 @@ class Config():
     def __init__(self):
         self.category = dict()
         self.conf = list()
-        # {'GDPR12': [{'table':'CLM','columns':['col1','col2']},...]}
+        # {'GDPR12': [{'table':'CLM','columns':[{'col1':{'active':'Y','masking':'Null'}},{'col2':{'active':'Y','masking':'Null'}}]},...]}
     def add_category(self, p_category):
         exist_flag = False
         for i in self.conf:
@@ -63,7 +63,7 @@ class Config():
                 new_cat.append(list)
         i[p_category] = new_cat
 
-    def upd_table(self, p_category, p_table, p_column):
+    def upd_table(self, p_category, p_table, p_column, p_upd_val, p_active):
         self.add_category(p_category)
         cat_list = self.get_category_list(p_category)
         new_cat_list = list()
@@ -73,9 +73,10 @@ class Config():
             if t['table'] == p_table:
                 #print('update')
                 #print(t)
+                val_dict = {p_column:{'active':p_active,'masking-value':p_upd_val}}
                 table_dict['table'] = t['table']
                 table_dict['columns']=t['columns']
-                table_dict['columns'].append(p_column)
+                table_dict['columns'].append(val_dict)
                 #print(table_dict)
                 new_cat_list.append(table_dict)
 
@@ -83,7 +84,8 @@ class Config():
                 #print('add')
                 new_cat_list.append(t)
         if not bool(table_dict):
-            new_cat_list.append({'table' : p_table, 'columns':[p_column]})
+            val_dict = {p_column:{'active':p_active,'update-value':p_upd_val}}
+            new_cat_list.append({'table' : p_table, 'columns':[val_dict]})
             #print('new_cat_list',new_cat_list)
         self.upd_category_list(p_category,new_cat_list)
 
@@ -98,7 +100,11 @@ with open (csv_file_name,'r+') as c:
     next(reader,None)
     for row in reader:
         #conf.upd_category(row["REL_CTGRY_TXT"])
-        conf.upd_table(row["REL_CTGRY_TXT"], row["TBL_NM"], row["ATT_NM"])
+        conf.upd_table(row["REL_CTGRY_TXT"],
+                       row["TBL_NM"],
+                       row["ATT_NM"],
+                       row["UPDT_VAL_TXT"],
+                       'Y' if row["ACTIVE_FLG"] == 1 else 'N')
 #print(conf.show_me())
 ydoc = yaml.dump(conf.show_me(),default_flow_style=False, sort_keys=False)
 print(ydoc)
